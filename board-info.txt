@@ -1,0 +1,2 @@
+require board=msm8916
+require version-baseband=2.0.2.C1.22-000013
