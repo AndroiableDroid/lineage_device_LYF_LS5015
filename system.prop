@@ -1,6 +1,0 @@
-#
-# system.prop for LYF Water 8
-#
-
-#NAV bar
-qemu.hw.mainkeys=0

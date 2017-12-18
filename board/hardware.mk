@@ -1,2 +1,0 @@
-# CMHW
-BOARD_HARDWARE_CLASS += device/LYF/LS5015/cmhw
