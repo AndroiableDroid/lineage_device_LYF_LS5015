@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2014-2016 The CyanogenMod Project
+ * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,9 +27,10 @@ import org.cyanogenmod.internal.util.FileUtils;
  * really should not be using this on a device with mechanical or
  * otherwise visible-when-inactive keys
  */
+
 public class KeyDisabler {
     private static final String CONTROL_PATH =
-            "/sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable";
+        "/sys/devices/soc.0/78ba000.i2c/i2c-6/6-0048/power_on";
 
     public static boolean isSupported() {
         return FileUtils.isFileReadable(CONTROL_PATH) &&

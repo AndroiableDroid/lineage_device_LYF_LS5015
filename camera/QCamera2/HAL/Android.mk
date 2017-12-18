@@ -47,8 +47,6 @@ ifneq ($(call is-platform-sdk-version-at-least,18),true)
 LOCAL_CFLAGS += -DUSE_JB_MR1
 endif
 
-LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON
-
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../stack/common \
         frameworks/native/include/media/openmax \
@@ -99,6 +97,6 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
-ifeq ($(TARGET_USES_AOSP),false)
+ifeq ($(TARGET_USES_AOSP),)
 include $(LOCAL_PATH)/test/Android.mk
 endif

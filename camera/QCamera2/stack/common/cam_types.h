@@ -31,17 +31,17 @@
 #define __QCAMERA_TYPES_H__
 
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 #include <pthread.h>
 #include <inttypes.h>
 #include <media/msmb_camera.h>
-#include <stdlib.h>
-#include <string.h>
 
 #define CAM_MAX_NUM_BUFS_PER_STREAM  (24)
 #define MAX_METADATA_PAYLOAD_SIZE    (1024)
 #define AWB_DEBUG_DATA_SIZE          (7027)
 #define AEC_DEBUG_DATA_SIZE          (1720)
-#define AF_DEBUG_DATA_SIZE           (643)
+#define AF_DEBUG_DATA_SIZE           (50000)
 #define ASD_DEBUG_DATA_SIZE          (100)
 #define STATS_BUFFER_DEBUG_DATA_SIZE (74756)
 

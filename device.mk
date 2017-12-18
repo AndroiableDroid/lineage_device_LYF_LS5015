@@ -20,9 +20,6 @@ $(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Due to multi-density builds, these are set by init
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model=LS5015 ro.sf.lcd_density=320
-
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (C) 2015 The CyanogenMod Project <http://www.cyanogenmod.org>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "LS5015"
+#define BTM_DEF_LOCAL_NAME   "LYF Water 8"
 #define BLUETOOTH_QTI_SW TRUE
 #define BLE_VND_INCLUDED   TRUE
 #endif

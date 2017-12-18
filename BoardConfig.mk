@@ -17,8 +17,7 @@ include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 include device/LYF/LS5015/board/*.mk
 
-# Assertions
 TARGET_BOARD_INFO_FILE := device/LYF/LS5015/board-info.txt
 
-# Inherit from proprietary files
+# inherit from the proprietary version
 -include vendor/LYF/LS5015/BoardConfigVendor.mk

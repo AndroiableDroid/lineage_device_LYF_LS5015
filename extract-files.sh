@@ -17,8 +17,8 @@
 
 set -e
 
-DEVICE=LS5015
-VENDOR=LYF
+DEVICE=kipper
+VENDOR=wileyfox
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -48,8 +48,6 @@ else
         exit 1
     fi
 fi
-
-"$CM_ROOT"/device/qcom/common/extractors/extract-files.sh "$SRC" msm8916 graphics
 
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"

@@ -4288,7 +4288,6 @@ int32_t QCamera2HardwareInterface::processHDRData(cam_asd_hdr_scene_data_t hdr_s
     int rc = NO_ERROR;
 
 #ifndef VANILLA_HAL
-
     if (hdr_scene.is_hdr_scene &&
       (hdr_scene.hdr_confidence > HDR_CONFIDENCE_THRESHOLD) &&
       mParameters.isAutoHDREnabled()) {
@@ -4409,8 +4408,6 @@ int32_t QCamera2HardwareInterface::processPrepSnapshotDoneEvent(
  *==========================================================================*/
 int32_t QCamera2HardwareInterface::processASDUpdate(cam_auto_scene_t scene)
 {
-
-#ifndef VANILLA_HAL
     //set ASD parameter
     mParameters.set(QCameraParameters::KEY_SELECTED_AUTO_SCENE, mParameters.getASDStateString(scene));
 
@@ -4450,7 +4447,6 @@ int32_t QCamera2HardwareInterface::processASDUpdate(cam_auto_scene_t scene)
         ALOGE("%s: fail sending notification", __func__);
         asdBuffer->release(asdBuffer);
     }
-#endif
     return NO_ERROR;
 
 }
@@ -5983,12 +5979,11 @@ int32_t QCamera2HardwareInterface::processFaceDetectionResult(cam_face_detection
     cbArg.cb_type = QCAMERA_DATA_CALLBACK;
     if(fd_type == QCAMERA_FD_PREVIEW){
         cbArg.msg_type = CAMERA_MSG_PREVIEW_METADATA;
-    }
 #ifndef VANILLA_HAL
-    else if(fd_type == QCAMERA_FD_SNAPSHOT){
+    }else if(fd_type == QCAMERA_FD_SNAPSHOT){
         cbArg.msg_type = CAMERA_MSG_META_DATA;
-    }
 #endif
+    }
     cbArg.data = faceResultBuffer;
     cbArg.metadata = roiData;
     cbArg.user_data = faceResultBuffer;
@@ -6108,10 +6103,8 @@ int32_t QCamera2HardwareInterface::processHistogramStats(cam_hist_stats_t &stats
         ALOGE("%s: fail sending notification", __func__);
         histBuffer->release(histBuffer);
     }
-    return NO_ERROR;
-#else
-    return NO_ERROR;
 #endif
+    return NO_ERROR;
 }
 
 /*===========================================================================

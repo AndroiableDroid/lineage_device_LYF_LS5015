@@ -1,8 +1,8 @@
-/sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl  u:object_r:touchpanel_sysfs:s0
-/sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable      u:object_r:touchpanel_sysfs:s0
+# CKTNV
+/system/bin/cktnvtool                                                                           u:object_r:cktnv_exec:s0
 
-# Yulong interfaces
-/dev/yl_alsprox_sensor                          u:object_r:sensors_device:s0
-/dev/yl_params1                                 u:object_r:ylparams_device:s0
+# Sensors
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-006b/sensors(/.*)?                                       u:object_r:sensors_sysfs:s0
 
-/system/bin/yl_btmac                            u:object_r:bluetooth_loader_exec:s0
+# Touchscreen
+/sys/devices/soc.0/78b9000.i2c/i2c-5/5-0024/main_ttsp_core.cyttsp4_i2c_adapter/btn_enabled      u:object_r:touchpanel_sysfs:s0
