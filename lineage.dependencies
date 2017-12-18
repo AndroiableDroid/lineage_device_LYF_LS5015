@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "android_device_cyanogen_msm8916-common",
+    "target_path": "device/cyanogen/msm8916-common"
+  },
+  {
+    "remote":"github",
+    "repository": "AndroiableDroid/android_kernel_LYF_LS5015",
+    "target_path": "kernel/LYF/LS5015",
+	 "revision":"n"
+  },
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
+  }
+]
